@@ -15,8 +15,10 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
   ],
+  optimization: {
+    emitOnErrors: true,
+  },
   module: {
     loaders: [{
       test: /\.js$/,
